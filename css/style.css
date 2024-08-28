@@ -155,7 +155,9 @@ img.animated.pulse {
 
 @media (min-width: 992px) {
 
-
+    .hero-header{
+        display: flex !important;
+    }
     .navbar .nav-item .dropdown-menu {
         display: block;
         border: none;
@@ -184,6 +186,9 @@ img.animated.pulse {
     background: url(../img/bg.jpg) center center no-repeat;
     background-size: cover;
     height: 100vh;
+    display: block;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-header::before {
