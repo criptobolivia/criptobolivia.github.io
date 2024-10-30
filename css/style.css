@@ -14,7 +14,7 @@ body{
     /* background-color: #1c2900;
     border-color: #1c2900; */
     background: linear-gradient(to bottom, #0058FB, #008EEC);
-    border-radius: 16px !important;
+    border-radius: 16px ;
 }
 
 .txt_cursive{
@@ -108,7 +108,7 @@ img.animated.pulse {
 }
 
 .navbar {
-    padding: 11px 0 !important;
+    padding: 11px 0 ;
     height: 85px;
 }
 
@@ -156,7 +156,7 @@ img.animated.pulse {
 @media (min-width: 992px) {
 
     .hero-header{
-        display: flex !important;
+        display: flex;
     }
     .navbar .nav-item .dropdown-menu {
         display: block;
@@ -226,7 +226,7 @@ img.animated.pulse {
 
 .feature-item .border {
     position: relative;
-    border-color: rgba(255, 255, 255, .2) !important;
+    border-color: rgba(255, 255, 255, .2) ;
     z-index: 1;
 }
 
