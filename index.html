@@ -50,9 +50,8 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
-    <nav style="background-color: #000; color: #fff; padding: 1rem; display: flex; justify-content: space-around; align-items: center;">
+    <nav style="background-color: #000; color: #fff; padding: 1rem; display: flex; justify-content: space-around; align-items: center;"class="container-fluid sticky-top">
         <div style="display: flex; align-items: center;">
             <img src="../img/criptologo.png" alt="logo" width="30" style="margin-right: 1rem;">
             <a href="#" style="color: #fff; margin-right: 1.5rem; text-decoration: none;">Comprar y Vender</a>
@@ -76,6 +75,8 @@
  <!-- Cambiar ícono por usuario -->
         </div>
     </nav>
+
+
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -86,81 +87,179 @@
     <!-- Spinner End -->
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid sticky-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <a href="index.html" class="logo1 navbar-brand">
-                    <!-- <h2 class="text-white">Hairnic</h2> -->
-                    <image src="img/logo.png" alt="logo" width="55" height="55" class="img-fluid">
-                </a>
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                        <a href="./servicios/" class="nav-item nav-link">Servicios</a>
-                    </div>
-                    <!-- <a href="" class="btn btn-dark py-2 px-4 d-none d-lg-inline-block">Shop Now</a> -->
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Navbar End -->
-
-
     <!-- Hero Start -->
     <div class="container-fluid bg-primary hero-header">
+        
         <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <image src="img/logo3.png" alt="logo" width="400" class="img-fluid animated slideInUp" style="padding-bottom: 2rem">
-
-                        <h2 class="fw-light text-white animated slideInRight">Compra, vende y gestiona
-                            tus criptoactivos
-                            de forma segura y sencilla
-                            desde cualquier lugar.</h2>
-                        <h3 style="color: #00f4cd; font-size: 1.45rem;">Regístrate Gratis y Comienza a Invertir.</h3>
-                        <!-- <h1 class="display-4 text-white animated slideInRight">Hair <span class="fw-light text-dark">Shampoo</span> For Healthy Hair</h1> -->
-                        <ul>
-                            <li class="text-white">Compra y vende criptomonedas de forma segura</li>
-                            <li class="text-white">Soporte 24/7</li>
-                            <li class="text-white">Seguridad Blockchain Garantizada</li>
-
-                        </ul>
-                        <a href="">
-                            <div class="btn btn-cripto py-2 px-4 me-3 animated slideInRight">
-                                <div class="txt_cursive fw-bold">12 M+</div>
-                                <div>Usuarios</div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="btn btn-cripto py-2 px-4 me-3 animated slideInRight">
-                                <div class="txt_cursive fw-bold">21 K+</div>
-                                <div>Transacciones</div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="btn btn-cripto py-2 px-4 me-3 animated slideInRight">
-                                <div class="txt_cursive fw-bold">10 K+</div>
-                                <div>Inversiones</div>
-                            </div>
-                        </a>
+            
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 text-center text-lg-start">
+                       
+    
+                            <h2 class="fw-light text-white animated slideInRight">Aprende, compra  y vende criptomonedas facilmente.</h2>
+                            <br>
+                            <h3 style="color: #00f4cd; font-size: 0.9rem;">Nuestra plataforma te guía en cada paso para que puedas aprender, invertir y comerciar criptomonedas de forma rápida y segura.</h3>
+                            <br>
+    
+    
+                            <a href="">
+                                <div class="btn btn-cripto py-2 px-4 me-3 animated slideInRight">
+                                    <div class="txt_cursive fw-bold"> Comenzar Ahora</div>
+                                
+                                </div>
+                            </a>
+                    </div>
+    
+                    <div class="col-lg-6 coin-container">
+                        <img class="img-fluid animated pulse infinite" src="../img/Coinlogo.png" alt="" style="padding-top: 5rem;">
+                    </div>
+                    
+    
                 </div>
-
-                <div class="col-lg-6">
-                    <img class="img-fluid animated pulse infinite" src="img/home.png" alt="" style="padding-top: 5rem;">
+            </div>
+            <div class="sponsors-section">
+                <h2>Nuestros Patrocinadores</h2>
+                <div class="sponsors">
+                    <span class="sponsor-text trafico">Tráfico</span>
+                    <span class="sponsor-separator">X</span>
+                    <span class="sponsor-text product">producto AKSPRODUCT</span>
+                    <span class="sponsor-text cartera">Cartera de Monedas</span>
                 </div>
+            </div>
+            <div class="crypto-container">
+                <div class="tabs">
+                    <button class="tab active">Cripto</button>
+                    <button class="tab">DeFi</button>
+                    <button class="tab">BSC</button>
+                    <button class="tab">NFT</button>
+                    <button class="tab">Lunares</button>
+                    <button class="tab">Solana</button>
+                </div>
+                <br>
+                <div class="crypto-cards">
+                    <div class="crypto-card">
+                        
+                        <div class="crypto-info">
+                            <div class="header-card-crypto">
+                                <p class="crypto-name">bitcoin</p>
+                                <p class="crypto-subname">BTC/USD</p>
 
+                            </div>
+                            <p class="crypto-price">46,168.35 $</p>
+                            <div class="footer-card-crypto">
+                                <p class="crypto-subtext">35,215.23 </p>
+                                <p class="crypto-change positive">+0.79%</p>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="crypto-card">
+                        
+                        <div class="crypto-info">
+                            <div class="header-card-crypto">
+                                <p class="crypto-name">bitcoin</p>
+                                <p class="crypto-subname">BTC/USD</p>
+
+                            </div>
+                            <p class="crypto-price">46,168.35 $</p>
+                            <div class="footer-card-crypto">
+                                <p class="crypto-subtext">35,215.23 </p>
+                                <p class="crypto-change positive">+0.79%</p>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="crypto-card">
+                        
+                        <div class="crypto-info">
+                            <div class="header-card-crypto">
+                                <p class="crypto-name">bitcoin</p>
+                                <p class="crypto-subname">BTC/USD</p>
+
+                            </div>
+                            <p class="crypto-price">46,168.35 $</p>
+                            <div class="footer-card-crypto">
+                                <p class="crypto-subtext">35,215.23 </p>
+                                <p class="crypto-change positive">+0.79%</p>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="crypto-card">
+                        
+                        <div class="crypto-info">
+                            <div class="header-card-crypto">
+                                <p class="crypto-name">bitcoin</p>
+                                <p class="crypto-subname">BTC/USD</p>
+
+                            </div>
+                            <p class="crypto-price">46,168.35 $</p>
+                            <div class="footer-card-crypto">
+                                <p class="crypto-subtext">35,215.23 </p>
+                                <p class="crypto-change positive">+0.79%</p>
+                                
+                            </div>
+
+                        </div>
+                    </div>
             </div>
-            <div class="col-lg-12 text-center " style="padding-top: 2rem; padding-bottom: 10px;">
-                <h2 class="display-7 text-white animated slideInLeft ">¡Invierte en el futuro de Bolivia con
-                    Criptomonedas!</h2>
-                    <image src="img/tipos.png" alt="logo" heigth="70" class="img-fluid animated slideInDown" style="max-height: 65px;" >
-            </div>
+            
         </div>
+        <br>
+        <!-- Mercado -->
+
+
+        <div class="market-update">
+            <h1 class="market-title">Actualización del Mercado</h1>
+            <div class="market-tabs">
+                <button class="tab active">Ver Todo</button>
+                <button class="tab">Monedas</button>
+                <button class="tab">Favoritas</button>
+                <button class="tab">Más Comercializadas</button>
+                <button class="tab">Estables</button>
+                <button class="tab">Fiat</button>
+            </div>
+        
+            <table class="market-table">
+                <thead class="market-table-header">
+                    <tr>
+                        <th class="market-table-heading">#</th>
+                        <th class="market-table-heading">Nombre</th>
+                        <th class="market-table-heading">Último Precio</th>
+                        <th class="market-table-heading">24h %</th>
+                        <th class="market-table-heading">Capitalización de mercado</th>
+                        <th class="market-table-heading">Últimos 7 días</th>
+                        <th class="market-table-heading"></th>
+                    </tr>
+                </thead>
+                <tbody class="market-table-body">
+                    <tr class="market-table-row">
+                        <td class="market-table-data">1</td>
+                        <td class="market-table-data">
+                            <img src="bitcoin-icon.png" alt="Bitcoin Icon" class="crypto-icon"> Bitcoin BTC
+                        </td>
+                        <td class="market-table-data">$56,513.24</td>
+                        <td class="market-table-data positive">1.45%</td>
+                        <td class="market-table-data">$880,423,640,582</td>
+                        <td class="market-table-data">
+                            <img src="sparkline-up.png" alt="Gráfico 7 días" class="sparkline">
+                        </td>
+                        <td class="market-table-data">
+                            <button class="trade-button">Comercio</button>
+                        </td>
+                    </tr>
+                    <!-- Añadir más filas según sea necesario -->
+                </tbody>
+            </table>
+        </div>
+        
+
+
+
     </div>
     <!-- Hero End -->
     

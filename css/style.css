@@ -183,7 +183,7 @@ img.animated.pulse {
     margin-top: -85px;
     padding-top: 2rem;
     /* padding-bottom: 7rem; */
-    background: url(../img/bg.jpg) center center no-repeat;
+    
     background-size: cover;
     height: 100vh;
     display: block;
@@ -479,4 +479,257 @@ img.animated.pulse {
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+.coin-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coin-container::before {
+    content: '';
+    position: absolute;
+    width: 400px; /* Ajusta el tamaño según el efecto deseado */
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 224, 152, 0.5), rgba(255, 224, 152, 0));
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(50px); /* Aplica desenfoque para suavizar el efecto */
+}
+.sponsors-section {
+   
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+
+.sponsors-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff; 
+}
+
+.sponsors {
+    display: flex;
+    align-items: center;
+}
+
+.sponsor-text {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.trafico {
+    font-family: 'Serif'; /* Ajusta la fuente según el diseño */
+    color: #007bff; /* Color azul para "Tráfico" */
+}
+
+.sponsor-separator {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #ccc; /* Color para la "X" */
+}
+
+.product {
+    font-weight: bold;
+    color: #FFC107; /* Color amarillo para "producto AKSPRODUCT" */
+}
+
+.cartera {
+    font-weight: bold;
+    color: #00E6E6; /* Color cian para "Cartera de Monedas" */
+
+}
+.tabs {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+
+}
+
+.tab {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+    text-transform: capitalize;
+}
+
+.tab:hover {
+    color: #00E6E6;
+}
+
+.tab.active {
+    font-weight: bold;
+    color: #ffffff;
+
+    border-radius: 30px;
+   
+    box-shadow: 0px 0px 20px 5px rgba(0, 230, 230, 0.5);
+    border: 2px solid #00E6E6;
+}
+
+.crypto-cards{
+    display: flex;
+    justify-content: space-evenly;
+    
+ 
+
+}
+.crypto-container {
+    background-color: #000;
+    border-radius: 16px;
+    box-shadow: 0px 0px 60px 15px rgba(255, 255, 255, 0.1);
+    padding: 20px;
+}
+.header-card-crypto{
+    justify-content: space-between;
+}
+.footer-card-crypto{
+    justify-content: space-between;
+}
+
+.crypto-card {
+    background-color: #090808; /* Fondo oscuro */
+    border-radius: 20px; /* Bordes redondeados */
+    width: 250px; /* Ancho fijo para la tarjeta */
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.header-card-crypto{
+    display: flex;
+}
+.footer-card-crypto{
+    display: flex;
+}
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
+}
+
+/* Contenedor principal del mercado */
+.market-update {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Título del mercado */
+.market-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Pestañas de navegación */
+.market-tabs {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+    text-transform: capitalize;
+}
+
+.tab.active {
+    font-weight: bold;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 20px;
+    background: rgba(0, 230, 230, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 230, 230, 0.5);
+}
+
+/* Tabla del mercado */
+.market-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #1b1b1b;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.market-table-header {
+    background-color: #111;
+}
+
+.market-table-heading {
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+    color: #bbbbbb;
+    border-bottom: 1px solid #333;
+}
+
+.market-table-body {
+    color: #fff;
+}
+
+.market-table-row {
+    border-bottom: 1px solid #333;
+}
+
+.market-table-data {
+    padding: 15px;
+    font-size: 16px;
+}
+
+/* Icono de criptomonedas */
+.crypto-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Gráfico de últimos 7 días */
+.sparkline {
+    width: 100px;
+    height: auto;
+}
+
+/* Botón de comercio */
+.trade-button {
+    background-color: #00b0ff;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.trade-button:hover {
+    background-color: #009be5;
+}
+
+/* Estilo de variación positiva y negativa */
+.positive {
+    color: #00e676;
+}
+
+.negative {
+    color: #ff5252;
 }
