@@ -180,7 +180,6 @@ img.animated.pulse {
 /*** Hero Header PRINCIPAL***/
 .hero-header {
     position: relative;
-    margin-top: -85px;
     padding-top: 2rem;
     /* padding-bottom: 7rem; */
     
@@ -492,7 +491,7 @@ img.animated.pulse {
     position: absolute;
     width: 400px; /* Ajusta el tamaño según el efecto deseado */
     height: 400px;
-    background: radial-gradient(circle, rgba(255, 224, 152, 0.5), rgba(255, 224, 152, 0));
+    background: radial-gradient(circle, #FFE098, rgba(255, 224, 152, 0));
     border-radius: 50%;
     z-index: -1;
     filter: blur(50px); /* Aplica desenfoque para suavizar el efecto */
@@ -732,4 +731,63 @@ body {
 
 .negative {
     color: #ff5252;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+.step {
+    text-align: center;
+    max-width: 200px;
+}
+                        
+
+
+.services-container {
+   
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 50px;
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.services-container h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.services-container p {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.explore-button {
+    background-color: #00d084;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.explore-button:hover {
+    background-color: #00a568;
 }
