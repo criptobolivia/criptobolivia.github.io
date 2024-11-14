@@ -791,3 +791,169 @@ body {
 .explore-button:hover {
     background-color: #00a568;
 }
+
+.app-download {
+    display: flex;
+    gap: 10px;
+}
+
+.app-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.app-button img {
+    height: 40px;
+    margin-right: 8px;
+}
+
+.app-button .text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.app-button span {
+    font-size: 12px;
+}
+
+.app-button strong {
+    font-size: 16px;
+}
+.icon-row {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    gap: -10px; /* Superposición */
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: #fff; 
+    margin-left: -15px;
+    /* Fondo blanco para el borde */
+}
+
+.icon-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: start;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0.3;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.carousel-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.carousel-item h3 {
+    margin: 10px 0 5px;
+}
+
+.carousel-item blockquote {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.carousel-btn {
+    background-color: #1ABC9C;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-section {
+    max-width: 200px;
+}
+
+.footer-section h4 {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-section.about p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
