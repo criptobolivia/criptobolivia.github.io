@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Criptomonedas</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="Compra, vende y gestiona tus criptoactivos de forma segura y sencilla desde cualquier lugar" name="description">
+
+
+    <!-- Open Graph Meta Tags --> 
+    <meta property="og:title" content="criptomonedas.com.bo"> 
+    <meta property="og:description" content="Con el creciente interés y la adopción de criptomonedas en Bolivia, especialmente a raíz de cambios recientes en la legislación que han permitido su uso en el país. Desde mediados de 2024, el Banco Central de Bolivia (BCB) ha autorizado oficialmente las operaciones con criptomonedas, permitiendo que las instituciones financieras y otros actores del mercado las utilicen como una alternativa a las divisas tradicionales, en particular frente a la escasez de dólares en el país."> 
+    <meta property="og:image" content="../img/logo.png"> 
+    <meta property="og:url" content="https://criptomonedas.com.bo"> 
+    <meta property="og:type" content="website"> 
+
+    <!-- Twitter Card Meta Tags (Opcional) --> 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="criptomonedas.com.bo">
+    <meta name="twitter:description" content="Con el creciente interés y la adopción de criptomonedas en Bolivia, especialmente a raíz de cambios recientes en la legislación que han permitido su uso en el país. Desde mediados de 2024, el Banco Central de Bolivia (BCB) ha autorizado oficialmente las operaciones con criptomonedas, permitiendo que las instituciones financieras y otros actores del mercado las utilicen como una alternativa a las divisas tradicionales, en particular frente a la escasez de dólares en el país."> 
+    <meta name="twitter:image" content="../img/logo.png">
+    
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+}
+
+.wallet-container {
+    display: flex;
+    height: 80vh;
+}
+
+.sidebar {
+    background-color: #000000;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 15px;
+}
+
+.sidebar-button {
+    background-color: transparent;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 80%;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar-button:hover {
+    background-color: #222;
+}
+
+.sidebar-button.active {
+    background-color: #009FE3;
+    color: white;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.balance-summary {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.balance-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.balance-label {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.balance-value {
+    font-size: 20px;
+    color: #00CEAC;
+    font-weight: bold;
+}
+
+.balance-usd {
+    font-size: 14px;
+    color: #009FE3;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #111;
+    color: white;
+}
+
+.search-button {
+    background-color: #009FE3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.currency-dropdown {
+    background-color: #111;
+    color: white;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.balance-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #111;
+    color: white;
+}
+
+.balance-table th, .balance-table td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+.balance-table th {
+    background-color: #222;
+    font-weight: bold;
+}
+
+.balance-table tr:hover {
+    background-color: #222;
+}
+
+</style>
+<body>
+    <nav style="background-color: #000; color: #fff; padding: 1rem; display: flex; justify-content: space-around; align-items: center;"class="container-fluid sticky-top">
+        <div style="display: flex; align-items: center;">
+            <img src="../img/criptologo.png" alt="logo" width="30" style="margin-right: 1rem;">
+            <a href="#" style="color: #fff; margin-right: 1.5rem; text-decoration: none;">Comprar y Vender</a>
+            <a href="Mercados/index.html" style="color: #fff; margin-right: 1.5rem; text-decoration: none;">Mercados</a>
+            <a href="#" style="color: #fff; margin-right: 1.5rem; text-decoration: none;">Blogs</a>
+            <a href="#" style="color: #fff; margin-right: 1.5rem; text-decoration: none;">Preguntas Frecuentes</a>
+
+        </div>
+        <div style="display: flex; align-items: center;">
+            <a href="#" style="color: #fff; margin-right: 1.5rem; text-decoration: none;">Órdenes y Operaciones</a>
+            <span style="color: #fff; margin-right: 1.5rem;">EN/USD</span>
+            <a href="#" style="color: #fff; margin-right: 1rem;"><img src="../img/themeselector.svg" alt=""></a> <!-- Cambiar ícono por sol/luna -->
+            <a href="#" style="color: #fff; margin-right: 1rem;"><img src="../img/notificationlogo.svg" alt=""></a> <!-- Cambiar ícono por campana -->
+            <a href="#" style="color: #fff; margin-right: 1rem; color: #fff;
+            padding: 8px 16px; /* Espacio interno */
+            border: 2px solid #00aaff; /* Borde azul */
+            border-radius: 20px; /* Bordes redondeados */
+            text-decoration: none; /* Quitar subrayado */
+            transition: background-color 0.3s, color 0.3s; /* Efecto de transición */">Billetera</a>
+            <a href="#" style="color: #fff;"><i class="icon-user-circle"></i></a>
+ <!-- Cambiar ícono por usuario -->
+        </div>
+    </nav>
+    <div class="market-container" style="background-color: black;margin-top: 5%;">
+  <!-- Texto centrado -->
+
+  
+   <div style="padding-left: 15%;padding-right: 15%; margin-top: -20px;">
+   
+    <div class="wallet-container">
+        <div class="sidebar">
+            <p style="font-size: 40px; text-align: start; align-items: start;">Billetera</p>
+            <button class="sidebar-button active">Ver Balance</button>
+            <button class="sidebar-button">Comprar</button>
+            <button class="sidebar-button">Vender</button>
+        </div>
+        <div class="divider">
+            divider
+        </div>
+    
+        <div class="content">
+            <div class="balance-summary">
+                <p class="balance-title">Ver Balance</p>
+                <p class="balance-label">Total Balance</p>
+                <p class="balance-value">0.79253864 BTC</p>
+                <p class="balance-usd">$12,068.83</p>
+            </div>
+    
+            <div class="balance-details">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search" class="search-input" />
+                    <button class="search-button">Mostrar Balance</button>
+                    <select class="currency-dropdown">
+                        <option value="USD">USD</option>
+                        <option value="BTC">BTC</option>
+                    </select>
+                </div>
+    
+                <table class="balance-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Asset</th>
+                            <th>Earn</th>
+                            <th>On Orders</th>
+                            <th>Available Balance</th>
+                            <th>Balance Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Agrega filas dinámicamente aquí -->
+                        <tr>
+                            <td>1</td>
+                            <td>USDT</td>
+                            <td>7.46% APR</td>
+                            <td>0.278 BTC</td>
+                            <td>0.278 BTC</td>
+                            <td>0.278 BTC</td>
+                        </tr>
+                        <!-- Repite filas similares -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <p style="font-size: 40px;">Gana hasta $10 en criptomonedas</p>
+            <p style="color: #009FE3; font-size: 14px;">Discover How Specific Cryptocurrencies Work — And Get A Bit Of Each Crypto To Try Out For Yourself.</p>
+        </div>
+
+    </div>
+    
+  
+      <footer class="footer">
+        <div class="footer-section about">
+            <p>Facilitamos el acceso seguro y confiable al mundo de las criptomonedas, ofreciendo soluciones digitales innovadoras para todos los niveles de experiencia.</p>
+            <p>criptonomedascz@hotmail.com</p>
+            <p>Av. Cañoto N°360 entre Alameda Junín y Av. Landívar / Diagonal monumento a Cañoto</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>PRODUCTOS</h4>
+            <ul>
+                <li>Monedas</li>
+                <li>Inversión</li>
+                <li>Compras de USDT</li>
+                <li>Intercambio</li>
+                <li>Lanzamientos</li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>SERVICIOS</h4>
+            <ul>
+                <li>Compra</li>
+                <li>Mercados</li>
+                <li>Programa de afiliados</li>
+                <li>Programa de referidos</li>
+                <li>API</li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>SOPORTE</h4>
+            <ul>
+                <li>Centro de ayuda</li>
+                <li>Comentario</li>
+                <li>Enviar Solicitud</li>
+                <li>Documentación API</li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>SOBRE NOSOTROS</h4>
+            <ul>
+                <li>Sobre Cripto</li>
+                <li>Contactos</li>
+                <li>Blog</li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copy-socialmedias" style="display: flex; align-items: center; justify-content: space-between; align-content: center;">
+        <p>Copyright @ 2024 www.criptomonedas.com.bo</p>
+        <div class="social-media" style="display: flex;">
+            <img src="../img/ic_round-facebook.svg" alt="" style="padding: 10px;">
+            <img src="../img/ri_instagram-fill.svg" alt=""style="padding: 10px;">
+            <img src="../img/uil_youtube.svg" alt=""style="padding: 10px;">
+            <img src="../img/uil_twitter.svg" alt=""style="padding: 10px;">
+
+
+        </div>
+    </div>        
+   
+      
+ </div>
+
+  </div>
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+
+</html>
