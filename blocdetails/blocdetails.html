@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Criptomonedas</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="Compra, vende y gestiona tus criptoactivos de forma segura y sencilla desde cualquier lugar" name="description">
+
+
+    <!-- Open Graph Meta Tags --> 
+    <meta property="og:title" content="criptomonedas.com.bo"> 
+    <meta property="og:description" content="Con el creciente interés y la adopción de criptomonedas en Bolivia, especialmente a raíz de cambios recientes en la legislación que han permitido su uso en el país. Desde mediados de 2024, el Banco Central de Bolivia (BCB) ha autorizado oficialmente las operaciones con criptomonedas, permitiendo que las instituciones financieras y otros actores del mercado las utilicen como una alternativa a las divisas tradicionales, en particular frente a la escasez de dólares en el país."> 
+    <meta property="og:image" content="../img/logo.png"> 
+    <meta property="og:url" content="https://criptomonedas.com.bo"> 
+    <meta property="og:type" content="website"> 
+
+    <!-- Twitter Card Meta Tags (Opcional) --> 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="criptomonedas.com.bo">
+    <meta name="twitter:description" content="Con el creciente interés y la adopción de criptomonedas en Bolivia, especialmente a raíz de cambios recientes en la legislación que han permitido su uso en el país. Desde mediados de 2024, el Banco Central de Bolivia (BCB) ha autorizado oficialmente las operaciones con criptomonedas, permitiendo que las instituciones financieras y otros actores del mercado las utilicen como una alternativa a las divisas tradicionales, en particular frente a la escasez de dólares en el país."> 
+    <meta name="twitter:image" content="../img/logo.png">
+    
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+}
+.search-bar {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+        .search-bar input {
+            padding: 10px;
+            color: #fff;
+            width: 80%;
+            background-color: #F3CE32;
+            max-width: 250px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+        }
+        .search-bar ::placeholder{
+            color: #fff;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 100px;
+        }
+        .submit-btn {
+    padding:5px 10px;
+    font-size: 12px;
+    margin-right: 10px;
+    background-color: #009FE3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    background-color: #009FE3;
+}
+        .card {
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: start;
+            transition: transform 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-icon {
+            text-align: start;
+            font-size: 40px;
+            color: #00ffcc;
+            margin-bottom: 15px;
+        }
+        .card-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card-text {
+            font-size: 11px;
+            line-height: 1.6;
+        }
+        .tag-btn{
+    padding:5px 10px;
+    font-size: 12px;
+    margin-right: 10px;
+    background-color: transparent;
+    color: #F3CE32;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #F3CE32;
+
+}
+.tag-btn{
+    padding:5px 10px;
+    font-size: 12px;
+    margin-right: 10px;
+    background-color: transparent;
+    color: #F3CE32;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #F3CE32;
+
+}
+.tags{
+    padding:5px 10px;
+    font-size: 12px;
+    margin-right: 10px;
+    background-color: transparent;
+    color: #00F4CD;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #00F4CD;
+}
+
+
+
+
+.form-container {
+    
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+input, textarea {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #F3CE32; /* Yellow underline */
+    color: #fff;
+    padding: 10px 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #888;
+}
+
+input:focus, textarea:focus {
+    border-bottom-color: #00AFFF; /* Blue underline on focus */
+}
+
+textarea {
+    resize: none;
+}
+
+.submit-btn {
+    align-self: flex-end;
+    background-color: #00AFFF; /* Blue button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #008CDB;
+}
+
+</style>
+<body>
+    <nav style="background-color: #000; color: #fff; padding: 1rem; display: flex; justify-content: space-around; align-items: center;"class="container-fluid sticky-top">
+        <div style="display: flex; align-items: center;">
+            <img src="../img/criptologo.png" alt="logo" width="30" style="margin-right: 1rem;">
+            <a href="#" style="color: #fff; margin-right: 1.5rem; text-decoration: none;">Comprar y Vender</a>
+            <a href="Mercados/index.html" style="color: #fff; margin-right: 1.5rem; text-decoration: none;">Mercados</a>
+            <a href="#" style="color: #fff; margin-right: 1.5rem; text-decoration: none;">Blogs</a>
+            <a href="#" style="color: #fff; margin-right: 1.5rem; text-decoration: none;">Preguntas Frecuentes</a>
+
+        </div>
+        <div style="display: flex; align-items: center;">
+            <a href="#" style="color: #fff; margin-right: 1.5rem; text-decoration: none;">Órdenes y Operaciones</a>
+            <span style="color: #fff; margin-right: 1.5rem;">EN/USD</span>
+            <a href="#" style="color: #fff; margin-right: 1rem;"><img src="../img/themeselector.svg" alt=""></a> <!-- Cambiar ícono por sol/luna -->
+            <a href="#" style="color: #fff; margin-right: 1rem;"><img src="../img/notificationlogo.svg" alt=""></a> <!-- Cambiar ícono por campana -->
+            <a href="#" style="color: #fff; margin-right: 1rem; color: #fff;
+            padding: 8px 16px; /* Espacio interno */
+            border: 2px solid #00aaff; /* Borde azul */
+            border-radius: 20px; /* Bordes redondeados */
+            text-decoration: none; /* Quitar subrayado */
+            transition: background-color 0.3s, color 0.3s; /* Efecto de transición */">Billetera</a>
+            <a href="#" style="color: #fff;"><i class="icon-user-circle"></i></a>
+ <!-- Cambiar ícono por usuario -->
+        </div>
+    </nav>
+    <div class="market-container" style="background-color: black;margin-top: 5%;">
+  <!-- Texto centrado -->
+
+  
+   <div style="padding-left: 15%;padding-right: 15%; margin-top: -20px;">
+    <div style="display: flex; justify-content: space-between;">
+        <div class="blog-details" style="width: 80%; padding-right: 20px;">
+            <h1 style="font-size: 40px;">Lorem Ipsum is simply dummy text of the printing</h1>
+            <h6 style="font-size: 12; color: #777777;">02 december 2022</h6>
+            <h5 style="font-size: 14px;line-height: 1.8;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
+            <img src="../img/banner-hands.png" alt="">
+            <h1 style="font-size: 24px;">What is Metaverse ?</h1>
+            <h5 style="font-size: 14px;line-height: 1.8;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
+            <div style="display: flex;">
+                <img src="../img/cripto-green-photo.png" alt="">
+                <div style="width: 40px;"></div>
+                <img src="../img/cripto-black-photo.png" alt="">
+
+            </div>
+            <h1 style="font-size: 24px;">The Frontier of a New Economy</h1>
+            <h5 style="font-size: 14px;line-height: 1.8;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
+            <h5 style="font-size: 14px;line-height: 1.8;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
+            <div style="display: flex; justify-content: space-between;">
+                <div>
+                    <button type="submit" class="tags">Crypto</button>
+                    <button type="submit" class="tags">Blockchain</button>
+                    <button type="submit" class="tags">Metaverse</button>
+                    <button type="submit" class="tags">Tokens</button>
+                </div>
+                <div>
+                    <img src="../img/ic_round-facebook.svg" alt="" style="padding-right: 10px;" >
+                    <img src="../img/ri_instagram-fill.svg" alt=""style="padding-right: 10px;" >
+                    <img src="../img/uil_youtube.svg" alt=""style="padding-right: 10px;" >
+                    <img src="../img/uil_twitter.svg" alt=""style="padding-right: 10px;" >
+
+                </div>
+                   
+
+
+            </div>
+            <div class="form-container">
+                <h2>Leave Comment</h2>
+                <form class="comment-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            
+                            <input type="text" id="name" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                           
+                            <input type="email" id="email" name="email" placeholder="Your Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="bloc-right" style="padding-top: 5%;">
+            <div>
+                <h1 style="font-size: 24px;">Lorem Ipsum is simply dummy text of the printing</h1>
+              
+                <p style="font-size: 12px;">02 december 2022</p>
+                <h1 style="font-size: 12px;line-height: 1.5;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</h1>
+                <button type="submit" class="submit-btn">Crypto</button>
+                <button type="submit" class="submit-btn">Blockchain</button>
+                <h1 style="font-size: 24px;">Lorem Ipsum is simply dummy text of the printing</h1>
+              
+                <p style="font-size: 12px;">02 december 2022</p>
+                <h1 style="font-size: 12px;line-height: 1.5;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</h1>
+                <button type="submit" class="submit-btn">Crypto</button>
+                <button type="submit" class="submit-btn">Blockchain</button>
+            </div>
+            <div class="popular-tags">
+                <h1 style="font-size: 24px;">Popular Tags</h1>
+                <div>
+                    <button type="submit" class="tag-btn">Crypto</button>
+                <button type="submit" class="tag-btn">Blockchain</button>
+                <button type="submit" class="tag-btn">Metaverse</button>
+                <button type="submit" class="tag-btn">Tokens</button>
+
+                </div>
+                <div style="margin-top:20px;">
+                    <button type="submit" class="tag-btn">NFTs</button>
+                    <button type="submit" class="tag-btn">BitCoin</button>
+                    <button type="submit" class="tag-btn">Wallets</button>
+                
+                </div>
+                
+
+            </div>
+
+        </div>
+       
+       
+       
+    
+    </div>
+   
+
+  
+    
+  
+      <footer class="footer">
+        <div class="footer-section about">
+            <p>Facilitamos el acceso seguro y confiable al mundo de las criptomonedas, ofreciendo soluciones digitales innovadoras para todos los niveles de experiencia.</p>
+            <p>criptonomedascz@hotmail.com</p>
+            <p>Av. Cañoto N°360 entre Alameda Junín y Av. Landívar / Diagonal monumento a Cañoto</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>PRODUCTOS</h4>
+            <ul>
+                <li>Monedas</li>
+                <li>Inversión</li>
+                <li>Compras de USDT</li>
+                <li>Intercambio</li>
+                <li>Lanzamientos</li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>SERVICIOS</h4>
+            <ul>
+                <li>Compra</li>
+                <li>Mercados</li>
+                <li>Programa de afiliados</li>
+                <li>Programa de referidos</li>
+                <li>API</li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>SOPORTE</h4>
+            <ul>
+                <li>Centro de ayuda</li>
+                <li>Comentario</li>
+                <li>Enviar Solicitud</li>
+                <li>Documentación API</li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>SOBRE NOSOTROS</h4>
+            <ul>
+                <li>Sobre Cripto</li>
+                <li>Contactos</li>
+                <li>Blog</li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copy-socialmedias" style="display: flex; align-items: center; justify-content: space-between; align-content: center;">
+        <p>Copyright @ 2024 www.criptomonedas.com.bo</p>
+        <div class="social-media" style="display: flex;">
+            <img src="../img/ic_round-facebook.svg" alt="" style="padding: 10px;">
+            <img src="../img/ri_instagram-fill.svg" alt=""style="padding: 10px;">
+            <img src="../img/uil_youtube.svg" alt=""style="padding: 10px;">
+            <img src="../img/uil_twitter.svg" alt=""style="padding: 10px;">
+
+
+        </div>
+    </div>        
+   
+      
+ </div>
+
+  </div>
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+
+</html>
