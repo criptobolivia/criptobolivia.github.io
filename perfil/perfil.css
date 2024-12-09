@@ -1,0 +1,284 @@
+.main-container {
+  display: grid;
+  grid-template-columns: 250px 1px auto;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 11%;
+  padding-right: 5%;
+  padding-top: 5%;
+  align-items: start;
+}
+
+.profile-section {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.user-email {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.sidebar {
+  padding: 20px;
+  border-radius: 8px;
+  height: auto;
+  text-align: left;
+  background-color: #000;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin: 15px 0;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 15px;
+  margin: 5px 0;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-nav li:hover a:not(.active) {
+  background-color: #333;
+}
+
+.sidebar-nav a.active {
+  background-color: #007bff;
+  color: #fff;
+  pointer-events: none;
+}
+
+.sidebar-nav a.active:hover {
+  cursor: default;
+}
+
+.sidebar-nav img {
+  width: 20px;
+  height: 20px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 90%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #111;
+  min-height: 500px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* CLAVES API */
+.content-header {
+  margin-bottom: 20px;
+}
+
+.content-header h1 {
+  font-size: 20px;
+  color: #ffce00;
+  margin-bottom: 10px;
+}
+
+.content-header .status {
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.email-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.email-container img {
+  width: 20px;
+  height: 20px;
+}
+
+.api-form {
+  background-color: #070606;
+  padding: 2rem;
+  border-radius: 8px;
+  display: grid;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-input {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 1rem);
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #ffce00;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  background: none;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 1px solid #ffce00;
+  color: #ffce00;
+  padding: 5px;
+  font-size: 14px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-bottom: 2px solid #ffce00;
+}
+
+.api-form .btn-primary {
+  margin-top: 2rem;
+  padding: 15px 0;
+  background-color: #00aaff;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+  align-self: center;
+  transition: background-color 0.3s ease;
+}
+
+.api-form .btn-primary:hover {
+  background-color: #005f99;
+}
+
+/* REFERENCIAS */
+.rewards-header h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.amount {
+  font-size: 40px;
+  color: #00b4ff;
+  margin: 10px 0;
+}
+
+.rewards-header a {
+  color: #00b4ff;
+  text-decoration: none;
+}
+
+.referral-section h2 {
+  margin: 30px 0 10px;
+  font-size: 20px;
+  color: #00f4cd;
+}
+
+.referral-info {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.referral-item {
+  text-align: left;
+}
+
+.referral-item label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #ffd700;
+}
+
+.referral-item input {
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
+  border: none;
+  color: #ffd700;
+  border-bottom: 2px solid #ffd700;
+  outline: none;
+}
+
+.btn-wallet {
+  background-color: #00b4ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-wallet:hover {
+  background-color: #008ecc;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .sidebar {
+      width: 100%;
+  }
+
+  .content {
+      width: 100%;
+  }
+
+  .footer-section ul {
+      padding-left: 20px;
+  }
+}
