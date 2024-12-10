@@ -4,8 +4,8 @@
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 11%;
-  padding-right: 5%;
+  padding-left: 0;
+  padding-right: 0;
   padding-top: 5%;
   align-items: start;
 }
@@ -100,13 +100,15 @@
   background-color: #111;
   min-height: 500px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  max-width: 800px;
+  max-width: 90%;
   margin: 0 auto;
+  width: 100%;
 }
 
 /* CLAVES API */
 .content-header {
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .content-header h1 {
@@ -138,7 +140,7 @@
   border-radius: 8px;
   display: grid;
   gap: 1.5rem;
-  max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -179,21 +181,20 @@
   border-bottom: 2px solid #ffce00;
 }
 
-.api-form .btn-primary {
-  margin-top: 2rem;
-  padding: 15px 0;
+.btn-primary {
+  margin: 0;
+  padding: 15px 30px;
   background-color: #00aaff;
-  color: #fff;
+  color: #fff !important;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  width: 200px;
   text-align: center;
-  align-self: center;
+  font-size: 14px;
   transition: background-color 0.3s ease;
 }
 
-.api-form .btn-primary:hover {
+.btn-primary:hover {
   background-color: #005f99;
 }
 
@@ -262,23 +263,114 @@
   background-color: #008ecc;
 }
 
+/* 2FA */
+.content-header-2fa{
+  margin-bottom: 20px;
+  text-align: left;
+}
 
-/* Responsive Design */
+.content-header-2fa h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.content-header-2fa p {
+  color: #00f4cd;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  margin-top: 1.5rem;
+}
+
+/* CAMBIAR CONTRASENA */
+.content-header-cp {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.content-header-cp h1 {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.api-form {
+  background-color: #070606;
+  padding: 2rem;
+  border-radius: 8px;
+  display: grid;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between; /* Asegura la distribución horizontal de los inputs */
+}
+
+.input-group-cp{
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 1rem); /* Ocupa el 50% del contenedor */
+}
+
+.input-group-cp label {
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.input-group-cp input {
+  background: none;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 1px solid #ffce00;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.input-group-cp input:focus {
+  outline: none;
+  border-bottom: 2px solid #ffce00;
+}
+
+.form-actions-cp {
+  display: flex;
+  justify-content: left; /* Centra el botón */
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    max-width: 800px;
+  }
+}
+
 @media (max-width: 768px) {
-  .container {
-      flex-direction: column;
-      align-items: center;
+  .main-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .vertical-line {
+    display: none;
   }
 
   .sidebar {
-      width: 100%;
+    text-align: center;
   }
 
   .content {
-      width: 100%;
-  }
-
-  .footer-section ul {
-      padding-left: 20px;
+    padding: 15px;
   }
 }
