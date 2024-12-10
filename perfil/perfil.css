@@ -97,7 +97,7 @@
 .content {
   padding: 20px;
   border-radius: 8px;
-  background-color: #111;
+  background-color: #000000;
   min-height: 500px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   max-width: 90%;
