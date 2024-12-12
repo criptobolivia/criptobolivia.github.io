@@ -70,46 +70,107 @@
       </div>
       <nav class="sidebar-nav">
         <ul>
-          <li><a href="perfil.html" class="button"><img src="../img/carbon_user.svg" alt="Icono Perfil">Perfil</a></li>
-          <li><a href="#" class="button active"><img src="../img/material-symbols_share-outline.svg"
+          <li><a href="#" class="button active"><img src="../img/carbon_user.svg" alt="Icono Perfil">Perfil</a></li>
+          <li><a href="referencias.html" class="button"><img src="../img/material-symbols_share-outline.svg"
                 alt="Icono Referidos">Referencias</a></li>
           <li><a href="claves-api.html" class=" button"><img src="../img/ic_outline-api@2x.svg"
                 alt="Icono Llaves API">Llaves API</a></li>
           <li><a href="2fa.html" class="button"><img src="../img/Vector.svg" alt="Icono 2FA">2FA</a></li>
-          <li><a href="cambiar-contrasena.html" class="button"><img src="../img/mdi_password.svg" alt="Icono Cambiar Contraseña">Cambiar
+          <li><a href="cambiar-contrasena.html" class="button"><img src="../img/mdi_password.svg"
+                alt="Icono Cambiar Contraseña">Cambiar
               Contraseña</a></li>
         </ul>
       </nav>
     </aside>
     <!-- END OF SIDEBAR -->
+
     <!-- VERTICAL LINE -->
     <div class="vertical-line"></div>
     <!-- END OF VERTICAL LINE -->
 
     <!-- MAIN CONTENT -->
-    <section class="content">
-      <div class="rewards-header">
-        <h1>Recompensas totales</h1>
-        <p class="amount">$1,056.00 USD</p>
-        <p>Obtendrá el 20% de las tarifas comerciales que pagan sus referencias. <a href="#">Más información</a></p>
-      </div>
-      <div class="referral-section">
-        <form class="api-form">
-          <h2>Invitar amigos a ganar 20%</h2>
-          <div class="form-input">
-            <div class="input-group">
-              <label for="enlace">Enlace de Referencia</label>
-              <input type="text" id="enlace">
-            </div>
-            <div class="input-group">
-              <label for="Codigo">Código de Referencia</label>
-              <input type="text" id="Codigo">
-            </div>
+    <div class="container">
+      <!-- PERFIL -->
+      <section class="content-profile">
+        <h1>Perfil</h1>
+        <form class="profile-form">
+          <!-- Nombre -->
+          <div class="input-group-profile">
+            <input type="text" placeholder="Nombre">
+          </div>
+          <!-- Apellido -->
+          <div class="input-group-profile">
+            <input type="text" placeholder="Apellido">
+          </div>
+          <!-- Correo Electrónico -->
+          <div class="input-group-profile">
+            <input type="text" placeholder="Correo Electronico">
+          </div>
+          <!-- Número de Teléfono -->
+          <div class="input-group-profile phone-group">
+            <select>
+              <option value="+1">+1</option>
+              <option value="+591">+591</option>
+            </select>
+            <input type="text" placeholder="Numero de Telefono">
+          </div>
+          <!-- País -->
+          <div class="input-group-profile">
+            <input type="text" placeholder="Bolivia">
+          </div>
+          <!-- Género Y Fecha de Nacimiento -->
+          <div class="input-group-profile phone-group">
+            <select>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+              <option value="Ottros">otros</option>
+            </select>
+            <input type="text" placeholder="DD/MM/AAAA">
           </div>
         </form>
-        <button type="submit" class="btn-primary">My Wallet</button>
+      </section>
+      <!-- CARACTERISTICAS -->
+      <section class="content-profile">
+        <h1>Caracteristicas</h1>
+        <div class="features">
+          <div class="level">
+              <div class="feature">
+                  <h3>NIVEL 1</h3>
+                  <div class="toggle">
+                      <span>Depositar Activos</span>
+                      <input type="checkbox" id="depositar">
+                  </div>
+                  <div class="toggle">
+                      <span>Retirar Activos</span>
+                      <span style="font-size: 12px;">Disponible $1,000,000/dia</span>
+                  </div>
+                  <div class="toggle">
+                      <span>Compras con Tarjeta</span>
+                      <input type="checkbox" id="compras">
+                  </div>
+                  <div class="toggle">
+                      <span>Depósito Bancario</span>
+                      <input type="checkbox" id="bancario">
+                  </div>
+              </div>
+              <div class="feature">
+                  <h3 style="color: #ffd700;">NIVEL 2</h3>
+                  <div class="toggle">
+                      <span>Fiat and Spot wallet</span>
+                      <input type="checkbox" id="fiat">
+                  </div>
+                  <div class="toggle">
+                      <span>Margen de la Billetera</span>
+                      <span style="font-size: 12px;">Apalancamiento de 100x</span>
+                  </div>
+              </div>
+          </div>
       </div>
-    </section>
+      </section>
+      <div class="button-container">
+        <button type="submit" class="btn-update">Actualizar Perfil</button>
+      </div>
+    </div>
     <!-- END OF MAIN CONTENT -->
   </div>
   <!-- END OF MAIN -->
@@ -119,7 +180,8 @@
     <div class="footer-content">
       <footer class="footer">
         <div class="footer-section about">
-          <p>Facilitamos el acceso seguro y confiable al mundo de las criptomonedas, ofreciendo soluciones digitales
+          <p>Facilitamos el acceso seguro y confiable al mundo de las criptomonedas, ofreciendo soluciones
+            digitales
             innovadoras para todos los niveles de experiencia.</p>
           <p>criptonomedascz@hotmail.com</p>
           <p>Av. Cañoto N°360 entre Alameda Junín y Av. Landívar / Diagonal monumento a Cañoto</p>
